@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/general.css">
+
+
+  <script>
+    // Наблюдаем за событием прокрутки страницы
+    window.addEventListener('scroll', () => {
+      const divElement = document.getElementById('top');
+      let keyscreen = 0;
+
+      if (window.pageYOffset > 360) {
+        divElement.classList.add('show');
+        divElement.classList.remove('reverse');
+        keyscreen = 1;
+        if (keyscreen == 1) {
+          divElement.classList.add('true');
+        }
+          
+      } else {
+        divElement.classList.remove('show');
+        
+        if (keyscreen == 1) {
+          keyscreen = 0;
+          divElement.classList.add('reverse');
+          setTimeout(() => {  divElement.classList.remove('reverse'); }, 700);
+          divElement.classList.add('false');
+        }
+      }
+    });
+  </script>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="nav_logo" href="/">
+        <img class="nav_logo_img" src="img/KHU2_medkursi.png" alt="">
+      </a>
+
+      <div class="invisible"></div>
+
+      <input id="burger-toggle" type="checkbox">
+      <label class="burger_label" for="burger-toggle">
+        <span></span>
+      </label>
+      <ul class="header__list">
+        <button class="all_button button_account">Личный кабинет</button>
+        <li><a href="/" class="header__link">Курсы</a></li>
+        <li><a href="https://krasgmu.ru/index.php?page[self]=cdo_olymp" class="header__link">Олимпиада</a></li>
+        <li><a href="https://krasgmu.ru/index.php?page[self]=masterclass" class="header__link">Мастер-классы</a></li>
+        <li><a href="/" class="header__link">Преподаватели</a></li>
+        <li><a href="https://krasgmu.ru/index.php?page[self]=abit_landing_tv#contacts" class="header__link">Контакты</a></li>
+        <li><a href="https://krasgmu.ru/index.php?page[self]=folders&band=0" class="header__link">Документы</a></li>
+      </ul>
+      <a class="account">
+        <img class="account_img" src="img/user.svg" alt="">
+      </a>
+    </nav>
+  </header>
+  <main>
+    
+    <div class="main_section greetings">
+      <h2 class="greetings_text">Твоя дорога к успешному будущему!</h2>
+      <div class="greetings_img" alt=""></div>
+      <button class="all_button greetings_button">Начать</button>
+    </div>
+    
+    <div class="main_section choice_of_direction">
+        <h2 class="choice_of_direction_text">Подготовка к поступлению</h2>
+          <div class="tab_container">
+            <div class="tab">
+
+              <input class="input_radio" checked id="tab-btn-1" name="tab-btn" type="radio" value="">
+              <label class="label_tab label_1" for="tab-btn-1">Дистанционные курсы</label>
+              <input class="input_radio" id="tab-btn-2" name="tab-btn" type="radio" value="">
+              <label class="label_tab label_2" for="tab-btn-2">Очные курсы</label>
+              <input class="input_radio" id="tab-btn-3" name="tab-btn" type="radio" value="">
+              <label class="label_tab label_3" for="tab-btn-3">Малая медицинская академия</label>
+              <input class="input_radio" id="tab-btn-4" name="tab-btn" type="radio" value="">
+              <label class="label_tab label_4" for="tab-btn-4">Подготовка во время каникул</label>
+              <!--
+              <input class="input_radio" id="tab-btn-5" name="tab-btn" type="radio" value="">
+              <label class="label_tab label_5" for="tab-btn-5">Экспресс-курсы</label>
+              -->
+
+              <div class="tab-content" id="content-1">
+                <div class="tab-content-info">
+                  <div class="tab-content-info-text">
+                    Содержание курса раскрывает все темы необходимые для успешной сдачи ЕГЭ. А проведение занятий высококвалифицированными преподавателями, обладающими необходимой методической и предметной подготовкой облегчает восприятие и запоминание предмета. Для каждого раздела всех учебных дисциплин подготовлен большой банк заданий для самопроверки.
+                  </div>
+                  <a class="all_button tab-content-info-button" href="https://krasgmu.ru/index.php?page[self]=abit_dovuz_course&id=4&type=1">Узнать больше</a>
+                </div>
+                <img class="tab-content-img" src="img/photo_1.jpg" alt="">
+              </div>
+              <div class="tab-content" id="content-2">
+                <div class="tab-content-info">
+                  <div class="tab-content-info-text">
+                    Данные циклы курсов разработаны для обучающихся 11 классов общеобразовательных организаций и выпускников организаций среднего профессионального образования. Содержание курса раскрывает все темы необходимые для успешной сдачи ЕГЭ, вступительных испытаний, проводимых Университетом. А проведение занятий высококвалифицированными преподавателями, обладающими необходимой методической и предметной подготовкой, облегчает восприятие и запоминание предмета.
+                  </div>
+                  <a class="all_button tab-content-info-button" href="https://krasgmu.ru/index.php?page[self]=abit_dovuz_course&id=3&type=1">Узнать больше</a>
+                </div>
+                <img class="tab-content-img" src="img/photo_2.jpg" alt="">
+              </div>
+              <div class="tab-content" id="content-3">
+                <div class="tab-content-info">
+                  <div class="tab-content-info-text">
+                    Двухгодичная форма обучения позволяет комфортно осваивать необходимый объем материала. Программа ММА разработана таким образом, что изучение предмета имеет логическую последовательность, а содержание курса раскрывает все темы, представленные в ЕГЭ. Теоретическая часть дополнена наглядными материалами кафедр Университета, которые облегчают восприятие и запоминание информации.
+                  </div>
+                  <a class="all_button tab-content-info-button" href="https://krasgmu.ru/index.php?page[self]=abit_dovuz_course&id=2&type=0">Узнать больше</a>
+                </div>
+                <img class="tab-content-img" src="img/photo_7.jpg" alt="">
+              </div>
+              <div class="tab-content" id="content-4">
+                <div class="tab-content-info">
+                  <div class="tab-content-info-text">
+                    Курс предлагает учащимся 11 классов и студентам СПО уникальную возможность эффективно использовать свободное время для подготовки к ЕГЭ и вступительным испытаниям в медицинский университет. В рамках этого блока проводится интенсивное погружение в ключевые темы, необходимые для успешной сдачи экзаменов. Опытные преподаватели проведут подробный разбор сложных вопросов по биологии, химии и другим профильным предметам.
+                  </div>
+                  <a class="all_button tab-content-info-button" href="https://krasgmu.ru/index.php?page[self]=abit_dovuz_course&id=1&type=0">Узнать больше</a>
+                </div>
+                <img class="tab-content-img" src="img/photo_8.png" alt="">
+              </div>
+              <!--
+              <div class="tab-content" id="content-5">
+                Содержимое 5... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex.
+              </div>
+              -->
+            </div>
+          </div>
+    </div>
+
+    
+    <div class="main_section choice_of_direction_mob">
+
+      <details class="details">
+        <summary class="details__title">Дистанционные курсы</summary>
+        <div class="details__content">
+          <img class="tab-content-img_mod" src="img/photo_1.jpg" alt="">
+          <div class="tab-content-info_mod">
+            <div class="tab-content-info-text_mod">
+              Содержание курса раскрывает все темы необходимые для успешной сдачи ЕГЭ. А проведение занятий высококвалифицированными преподавателями, обладающими необходимой методической и предметной подготовкой облегчает восприятие и запоминание предмета. Для каждого раздела всех учебных дисциплин подготовлен большой банк заданий для самопроверки.
+            </div>
+            <a class="all_button tab-content-info-button_mod" href="https://krasgmu.ru/index.php?page[self]=abit_dovuz_course&id=4&type=1">Узнать больше</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="details">
+        <summary class="details__title">Очные курсы</summary>
+        <div class="details__content">
+            <img class="tab-content-img_mod" src="img/photo_2.jpg" alt="">
+            <div class="tab-content-info_mod">
+              <div class="tab-content-info-text_mod">
+                Данные циклы курсов разработаны для обучающихся 11 классов общеобразовательных организаций и выпускников организаций среднего профессионального образования. Содержание курса раскрывает все темы необходимые для успешной сдачи ЕГЭ, вступительных испытаний, проводимых Университетом. А проведение занятий высококвалифицированными преподавателями, обладающими необходимой методической и предметной подготовкой, облегчает восприятие и запоминание предмета.
+              </div>
+              <a class="all_button tab-content-info-button_mod" href="https://krasgmu.ru/index.php?page[self]=abit_dovuz_course&id=3&type=1">Узнать больше</a>
+            </div>
+        </div>
+      </details>
+
+      <details class="details">
+        <summary class="details__title">Малая медицинская академия</summary>
+        <div class="details__content">
+            <img class="tab-content-img_mod" src="img/photo_7.jpg" alt="">
+            <div class="tab-content-info_mod">
+              <div class="tab-content-info-text_mod">
+                Содержимое 2... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex. Содержимое 1... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum  
+              </div>
+              <a class="all_button tab-content-info-button_mod" href="https://krasgmu.ru/index.php?page[self]=abit_dovuz_course&id=2&type=0">Узнать больше</a>
+            </div>
+        </div>
+      </details>
+
+      <details class="details">
+        <summary class="details__title">Подготовка во время каникул</summary>
+        <div class="details__content">
+            <img class="tab-content-img_mod" src="img/photo_8.png" alt="">
+            <div class="tab-content-info_mod">
+              <div class="tab-content-info-text_mod">
+                Содержимое 2... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex. Содержимое 1... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum  
+              </div>
+              <a class="all_button tab-content-info-button_mod" href="https://krasgmu.ru/index.php?page[self]=abit_dovuz_course&id=1&type=0">Узнать больше</a>
+            </div>
+        </div>
+      </details>
+
+      <!--
+      <details class="details">
+        <summary class="details__title">Экспресс-курсы</summary>
+        <div class="details__content">
+            <img class="tab-content-img_mod" src="img/img_1.png" alt="">
+            <div class="tab-content-info_mod">
+              <div class="tab-content-info-text_mod">
+                Содержимое 2... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum, vero ad totam ratione sequi! Suscipit, labore repellat cum soluta ullam dignissimos perspiciatis sequi rerum sapiente ex. Содержимое 1... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque iure debitis nostrum  
+              </div>
+              <button class="all_button tab-content-info-button_mod">Узнать больше</button>
+            </div>
+        </div>
+      </details>
+      -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="news">
+      <div class="slider_up_panel">
+        <h2 class="news_h2">Новости</h2>
+        <button class="all_button news_button">Все новости</button>
+      </div>
+      <div class="slider">
+        <div class="slider_line">
+          <div class="slider_elem">
+            <div class="slider_elem_content">
+              <img class="slider_elem_img" src="img/photo_4.jpg" alt="">
+              <div class="slider_elem_info">
+                <p class="slider_elem_type">ТИП НОВОСТИ</p>
+                <p class="slider_elem_date">01.01.0001</p>
+              </div>
+              <h4 class="slider_elem_text">Мы ждем тебя на Всероссийской IV конференции-конкурсе исследовательских и проектных работ школьников</h4>  
+            </div>
+          </div>
+          <div class="slider_elem">
+            <div class="slider_elem_content">
+              <img class="slider_elem_img" src="img/photo_6.jpg" alt="">
+              <div class="slider_elem_info">
+                <p class="slider_elem_type">ТИП НОВОСТИ</p>
+                <p class="slider_elem_date">01.01.0001</p>
+              </div>
+              <h4 class="slider_elem_text">Небольшой текст</h4>
+            </div>
+          </div>
+          <div class="slider_elem">
+            <div class="slider_elem_content">
+              <img class="slider_elem_img" src="img/photo_2.jpg" alt="">
+              <div class="slider_elem_info">
+                <p class="slider_elem_type">ТИП НОВОСТИ</p>
+                <p class="slider_elem_date">01.01.0001</p>
+              </div>
+              <h4 class="slider_elem_text">Довольно средний текст для темы</h4>
+            </div>
+          </div>
+          <div class="slider_elem">
+            <div class="slider_elem_content">
+              текст4
+            </div>
+          </div>
+          <div class="slider_elem">
+            <div class="slider_elem_content">
+              <img class="slider_elem_img" src="img/photo_1.jpg" alt="">
+              <div class="slider_elem_info">
+                <p class="slider_elem_type">ТИП НОВОСТИ</p>
+                <p class="slider_elem_date">01.01.0001</p>
+              </div>
+              <h4 class="slider_elem_text">Довольно средний текст для темы еще текст</h4>
+            </div>
+          </div>
+          <div class="slider_elem">
+            <div class="slider_elem_content">
+              текст6
+            </div>
+          </div>
+          <div class="slider_elem">
+            <div class="slider_elem_content">
+              текст7
+            </div>
+          </div>
+          <div class="slider_elem">
+            <div class="slider_elem_content">
+              текст8
+            </div>
+          </div>
+          <div class="slider_elem">
+            <div class="slider_elem_content">
+              текст9
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider_buttons">
+        <button class="slider-prev"><div class="long-arrow-left "></div></button>
+        <button class="slider-next"><div class="long-arrow-right"></div></button>
+      </div>
+      
+  </div>
+
+    <div class="main_section additional_programs">
+      <h2 class="additional_programs_h2">Дополнительные программы</h2>
+      <div class="additional_programs_blocks_list">
+        <a class="additional_programs_block" href="https://krasgmu.ru/index.php?page[self]=cdo_olymp">
+          <img class="additional_programs_block_img" src="img/photo_4.jpg" alt="">
+          <div class="additional_programs_block_text_container">
+            <h3 class="additional_programs_block_text">Олимпиада</h3>
+          </div>
+        </a>
+        <a class="additional_programs_block" href="https://krasgmu.ru/index.php?page[self]=cdo&p=dvo&dp=contest">
+          <img class="additional_programs_block_img" src="img/photo_3.jpg" alt="">
+          <div class="additional_programs_block_text_container">
+            <h3 class="additional_programs_block_text">Конкурс научных работ</h3>
+          </div>
+        </a>
+        <a class="additional_programs_block" href="https://krasgmu.ru/index.php?page[self]=masterclass">
+          <img class="additional_programs_block_img" src="img/photo_6.jpg" alt="">
+          <div class="additional_programs_block_text_container">
+            <h3 class="additional_programs_block_text">Мастер классы</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="main_section study_with_us">
+      <div>
+        <h2 class="study_with_us_h2">УЧИТЕСЬ ВМЕСТЕ С НАМИ!</h2>
+        <div class="study_with_us_container">
+          <h3 class="study_with_us_h3">Отдел управления довузовского обучения КрасГМУ<br class="study_with_us_br"> приглашает к сотрудничеству школы, лицеи, гимназии!</h3>
+          <a class="all_button study_with_us_button" href="https://krasgmu.ru/index.php?page[self]=cdo&p=dvo&dp=timetable">Связаться с нами</a>
+          <div class="study_with_us_img"></div> <!--src="img/photo_10.png" alt=""-->
+        </div>
+      </div>
+    </div>
+    
+  </main>
+  <footer>
+    <div class="footer_container">
+      <div class="footer_info">
+        <div class="footer_info_email_and_phone">
+          <a class="footer_info_link footer_info_link_mail">dovuz@krasgmu.ru</a>
+          <a class="footer_info_link">+7 (391) 228-08-66</a>
+          <div class="footer_info_link_img_container_fullscreen">
+            <a class="footer_info_link_img" href="https://vk.com/krasgmu_official">
+              <img class="footer_info_link_img_file" src="img/vk.svg" alt="">
+            </a>
+            <a class="footer_info_link_img" href="https://t.me/krasgmu_official">
+              <img class="footer_info_link_img_file" src="img/telegram.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <p class="footer_info_adress">660022, г. Красноярск, <br> Партизана Железняка 1, <br> 1-46а</p>
+
+      </div>
+      <div class="footer_link_list">
+        <a class="footer_link_list_link" href="https://krasgmu.ru/">Сайт КрасГМУ</a>
+        <a class="footer_link_list_link" href="https://abit.krasgmu.ru/">Абитуриент КрасГМУ</a>
+      </div>
+      <div class="footer_info_link_img_container_mobilescreen">
+        <a class="footer_info_link_img" href="https://vk.com/krasgmu_official">
+          <img class="footer_info_link_img_file" src="img/vk.svg" alt="">
+        </a>
+        <a class="footer_info_link_img" href="https://t.me/krasgmu_official">
+          <img class="footer_info_link_img_file" src="img/telegram.svg" alt="">
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="#" class="top" id="top">
+    <img class="top_img" src="img/up.png" alt="">
+  </a>
+
+
+  <script src="js/script.js"></script>
+</body> 
+</html>
+
+
+
+
+
+
+<!--
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Main</title>
+  <link rel="stylesheet" href="/css/font.css">
+  <link rel="stylesheet" href="/css/general.css">
+</head>
+
+<body>
+    <header>
+        <div class="header_logo_container">
+            <div class="header_logo_img">
+                <img class="header_logo_img_file" src="img\logo_krasgmu2_good.png">
+            </div>
+            <div class="header_logo_text">
+                МедКурсы
+            </div>
+        </div>
+        <div class="header_text_container">
+            <nav class="header_text_nav">
+                <li class="header_text_li">Курсы</li>
+                <li class="header_text_li">Олимпиада</li>
+                <li class="header_text_li">Мастер-классы</li>
+                <li class="header_text_li">Сотрудники</li>
+                <li class="header_text_li">Контакты</li>
+            </nav>
+        </div>
+        <div class="header_account_container">
+            <div class="header_account_img">
+                <img class="header_account_img_file" src="img\avatar_def.png">
+            </div>
+        </div>
+        <div class="burger_menu">
+            123
+            <span></span>
+        </div>
+    </header>
+    
+    <main>
+        <div class="main_preparation_for_admission_container">
+
+        </div>
+        <div class="main_additional_programs_container">
+            
+        </div>
+        <div class="main_start_your_journey_container">
+
+        </div>
+        <div class="main_ask_a_question_container">
+
+        </div>    
+    </main>
+
+    <footer>
+        <div class="footer_contacts_container">
+
+        </div>
+        <div class="footer_links_container">
+
+        </div>
+    </footer>
+</body>
+
+</html> -->
