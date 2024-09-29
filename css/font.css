@@ -2,7 +2,7 @@
     /* название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) */ 
     font-family: "GolosText"; 
     /* адрес шрифта и тип */ 
-    src: url("/fonts/GolosText-VariableFont_wght.ttf") format("truetype"); 
+    src: url("GolosText-VariableFont_wght.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
   }
